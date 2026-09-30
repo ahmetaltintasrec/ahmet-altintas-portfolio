@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmet Altıntaş | Videographer & Visual Designer</title>
+    
+    <!-- SEO & GEO (Gemini AI & Google) Meta Tags -->
+    <meta name="description" content="Ahmet Altıntaş - Videographer & Visual Designer. Sinematik video kurgu, motion graphics ve minimalist görsel tasarım portfolyosu.">
+    <meta name="keywords" content="Ahmet Altıntaş, Videographer, Visual Designer, Video Kurgu, Motion Graphics, Grafik Tasarım">
+    <meta name="author" content="Ahmet Altıntaş">
+    <meta name="robots" content="index, follow">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            950: '#070707',
+                            900: '#0a0a0a',
+                            800: '#111111',
+                            700: '#1a1a1a'
+                        },
+                        amberGlow: '#e5a900', // Loş / Sinyal Sarısı
+                        waGreen: '#25D366' // WhatsApp Yeşili
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                        display: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Font: Inter (Clean, Minimal, Classic) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Gemini AI & Google Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ahmet Altıntaş",
+      "jobTitle": "Videographer & Visual Designer",
+      "email": "infoahmetaltintas@gmail.com",
+      "telephone": "+905302921835",
+      "description": "Ahmet Altıntaş; video kurgu, videografi, motion graphics ve minimalist görsel tasarım alanında faaliyet gösteren kreatif uzmandır.",
+      "knowsAbout": [
+        "Videography",
+        "Video Editing",
+        "Motion Graphics",
+        "Visual Design",
+        "Color Grading"
+      ]
+    }
+    </script>
+
+    <style>
+        body {
+            background-color: #070707;
+            color: #ececec;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Dark Glass Reflection Backdrop */
+        .glass-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            background: radial-gradient(circle at 50% 15%, #141414 0%, #070707 70%);
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        /* Glass Reflection Light Sweep */
+        .glass-reflection {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.015) 42%,
+                rgba(229, 169, 0, 0.04) 50%,
+                rgba(255, 255, 255, 0.015) 58%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(-25deg);
+            animation: glassSweep 14s ease-in-out infinite alternate;
+        }
+
+        @keyframes glassSweep {
+            0% {
+                transform: translateY(-6%) rotate(-25deg) scale(0.98);
+                opacity: 0.4;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(6%) rotate(-25deg) scale(1.02);
+                opacity: 0.5;
+            }
+        }
+
+        /* Ambient Glass Grid Texture */
+        .glass-grid {
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+            background-size: 32px 32px;
+            mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+            opacity: 0.4;
+        }
+
+        /* Frosted Glass Card Styling */
+        .glass-card {
+            background: rgba(18, 18, 18, 0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(229, 169, 0, 0.35);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 25px rgba(229, 169, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #070707;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1c1c1c;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #e5a900;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-amberGlow selection:text-black relative overflow-x-hidden">
+
+    <div class="glass-bg">
+        <div class="glass-reflection"></div>
+        <div class="glass-grid"></div>
+        <!-- Subtle Ambient Light Orbs -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-amberGlow/5 blur-[140px] rounded-full pointer-events-none"></div>
+    </div>
+
+    <!-- Header / Nav -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-[#070707]/70 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="font-bold tracking-tight text-white text-sm uppercase flex items-center gap-2.5 group">
+                <span class="w-2 h-2 rounded-full bg-amberGlow group-hover:scale-125 transition-transform shadow-[0_0_8px_#e5a900]"></span>
+                <span class="tracking-wider">AHMET ALTINTAŞ</span>
+            </a>
+
+            <nav class="flex items-center gap-8 text-xs font-medium tracking-widest text-neutral-400 uppercase">
+                <a href="#about" class="hover:text-amberGlow transition-colors">HAKKIMDA</a>
+                <a href="#portfolio" class="hover:text-amberGlow transition-colors">PORTFOLYO</a>
+                <a href="#contact" class="hover:text-amberGlow transition-colors">İLETİŞİM</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center pt-20 relative z-10">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            
+            <span class="inline-flex items-center gap-2 text-[11px] font-semibold tracking-[0.25em] text-amberGlow uppercase mb-8 px-4 py-1.5 rounded-full border border-amberGlow/20 bg-amberGlow/5 backdrop-blur-md">
+                <span class="w-1.5 h-1.5 rounded-full bg-amberGlow animate-pulse"></span>
+                VIDEOGRAPHER & VISUAL DESIGNER
+            </span>
+
+            <h1 class="text-5xl sm:text-7xl md:text-8xl font-black text-white mb-8 tracking-tight leading-none uppercase">
+                AHMET ALTINTAŞ
+            </h1>
+
+            <p class="text-neutral-400 text-base sm:text-lg max-w-xl mx-auto mb-10 leading-relaxed font-light">
+                Sinematik video kurgu, hareketli grafikler ve minimalist görsel tasarım çözümleri.
+            </p>
+
+            <div class="flex items-center justify-center gap-6">
+                <a href="#portfolio" class="bg-amberGlow hover:bg-[#f5b800] text-black text-xs font-bold uppercase tracking-widest px-8 py-4 rounded-lg transition-all shadow-lg shadow-amberGlow/10 hover:shadow-amberGlow/20">
+                    Çalışmaları İncele
+                </a>
+                <a href="#contact" class="text-neutral-400 hover:text-white text-xs font-semibold tracking-widest uppercase transition-colors">
+                    İletişime Geç &rarr;
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Hakkımda Section -->
+    <section id="about" class="py-28 relative z-10 border-t border-white/5">
+        <div class="max-w-3xl mx-auto px-6">
+            <span class="text-[10px] font-semibold tracking-[0.3em] text-neutral-500 uppercase block mb-3">01. HAKKIMDA</span>
+            
+            <h2 class="text-2xl sm:text-4xl font-extrabold text-white mb-8 tracking-tight leading-snug">
+                Minimalist sinematik görsel estetik.
+            </h2>
+
+            <div class="space-y-6 text-neutral-400 text-sm sm:text-base leading-relaxed font-light">
+                <p>
+                    Ben <strong class="text-white font-normal">Ahmet Altıntaş</strong>. Videografi, video kurgu, motion graphics ve görsel tasarım alanlarında marka ve içerik üreticileri için değer katan işler üretiyorum.
+                </p>
+                <p>
+                    Karmakarışık yapılardan uzak, minimalist ve ritmi yüksek görsel anlatımı benimsiyorum. Çekimden kurguya, renk düzenlemeden hareketli grafik tasarımlarına kadar tüm süreçleri profesyonel standartlarda tamamlıyorum.
+                </p>
+            </div>
+
+            <!-- Expertise List in Glass Box -->
+            <div class="glass-card rounded-xl p-6 grid grid-cols-2 sm:grid-cols-3 gap-4 mt-12 text-xs text-neutral-300 font-medium">
+                <div class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amberGlow"></span>
+                    <span>Videography & Çekim</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amberGlow"></span>
+                    <span>Video Editing & Montaj</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amberGlow"></span>
+                    <span>Motion Graphics</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amberGlow"></span>
+                    <span>Color Grading</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amberGlow"></span>
+                    <span>Görsel Tasarım</span>
+                </div>
+                <div class="flex items-center gap-2.5">
+                    <span class="w-1.5 h-1.5 rounded-full bg-amberGlow"></span>
+                    <span>Sosyal Medya Kurgusu</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Portfolyo Section -->
+    <section id="portfolio" class="py-28 relative z-10 border-t border-white/5">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="mb-14">
+                <span class="text-[10px] font-semibold tracking-[0.3em] text-neutral-500 uppercase block mb-2">02. PORTFOLYO</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Seçilmiş Çalışmalar</h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-8">
+                
+                <!-- PROJE 1: VIDEO ÖRNEĞİ -->
+                <!-- openModal('BAŞLIK', 'video', 'VIDEO_LINKI.mp4', 'KATEGORİ') -->
+                <div class="glass-card rounded-xl overflow-hidden group cursor-pointer" onclick="openModal('Sinematik Tanıtım Filmi', 'video', 'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4', 'Video Kurgu & Color Grading')">
+                    <div class="aspect-video relative overflow-hidden bg-neutral-900">
+                        <!-- KAPAK RESMİ LINKI -->
+                        <img src="https://images.unsplash.com/photo-1536240478700-b869070f9279?auto=format&fit=crop&w=800&q=80" alt="Sinematik Tanıtım Filmi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div class="w-12 h-12 rounded-full bg-amberGlow text-black flex items-center justify-center text-base shadow-lg shadow-amberGlow/20">
+                                <i class="fas fa-play ml-0.5"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex items-center justify-between">
+                        <div>
+                            <!-- KART ÜZERİNDEKİ BAŞLIK VE KATEGORİ -->
+                            <h3 class="text-base font-bold text-white group-hover:text-amberGlow transition-colors">Sinematik Tanıtım Filmi</h3>
+                            <p class="text-xs text-neutral-400 mt-1 font-light">Video Editing & Color</p>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square text-xs text-neutral-500 group-hover:text-amberGlow transition-colors"></i>
+                    </div>
+                </div>
+
+                <!-- PROJE 2: GÖRSEL / FOTOĞRAF ÖRNEĞİ -->
+                <!-- openModal('BAŞLIK', 'image', 'RESIM_LINKI.jpg', 'KATEGORİ') -->
+                <div class="glass-card rounded-xl overflow-hidden group cursor-pointer" onclick="openModal('Minimalist Kurumsal Kimlik', 'image', 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=1200&q=80', 'Görsel Tasarım & Marka Kimliği')">
+                    <div class="aspect-video relative overflow-hidden bg-neutral-900">
+                        <!-- KAPAK RESMİ LINKI -->
+                        <img src="https://images.unsplash.com/photo-1600132806370-bf17e65e942f?auto=format&fit=crop&w=800&q=80" alt="Görsel Tasarım" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <div class="w-12 h-12 rounded-full bg-amberGlow text-black flex items-center justify-center text-base shadow-lg shadow-amberGlow/20">
+                                <i class="fas fa-expand"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 flex items-center justify-between">
+                        <div>
+                            <!-- KART ÜZERİNDEKİ BAŞLIK VE KATEGORİ -->
+                            <h3 class="text-base font-bold text-white group-hover:text-amberGlow transition-colors">Marka Kimliği & Tasarım</h3>
+                            <p class="text-xs text-neutral-400 mt-1 font-light">Visual Design</p>
+                        </div>
+                        <i class="fas fa-arrow-up-right-from-square text-xs text-neutral-500 group-hover:text-amberGlow transition-colors"></i>
+                    </div>
+                </div>
+
+    </section>
+
+    <!-- İletişim Section -->
+    <section id="contact" class="py-28 relative z-10 border-t border-white/5">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <span class="text-[10px] font-semibold tracking-[0.3em] text-neutral-500 uppercase block mb-3">03. İLETİŞİM</span>
+            
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-6 tracking-tight">
+                Birlikte Çalışalım.
+            </h2>
+            <p class="text-neutral-400 text-sm sm:text-base max-w-md mx-auto mb-12 font-light">
+                Projeleriniz, video kurgu veya tasarım ihtiyaçlarınız için bana doğrudan ulaşabilirsiniz.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+                <!-- Direct WhatsApp Business Link with WA Green -->
+                <a href="https://wa.me/905302921835" target="_blank" class="w-full sm:w-auto bg-[#25D366] hover:bg-[#20bd5a] text-black font-bold text-xs uppercase tracking-widest px-8 py-4 rounded-lg transition-all flex items-center justify-center gap-2.5 shadow-lg shadow-[#25D366]/20">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                    <span>WhatsApp İle Ulaşın</span>
+                </a>
+
+                <!-- Email Copy Button -->
+                <button onclick="copyEmail()" class="w-full sm:w-auto glass-card hover:bg-neutral-800/80 text-white font-semibold text-xs tracking-widest uppercase px-8 py-4 rounded-lg transition-all flex items-center justify-center gap-2">
+                    <i class="far fa-envelope text-neutral-400"></i>
+                    <span id="emailBtnText">E-Posta Adresini Kopyala</span>
+                </button>
+            </div>
+
+            <!-- Toast Notification -->
+            <div id="toast" class="fixed bottom-8 left-1/2 -translate-x-1/2 bg-recRed text-white text-xs font-bold px-6 py-3 rounded-full opacity-0 pointer-events-none transition-all duration-300 z-50 shadow-xl shadow-recRed/20">
+                E-posta adresi kopyalandı! (infoahmetaltintas@gmail.com)
+            </div>
+
+            <!-- Minimalist Social Icons: Only Instagram, WhatsApp, Gmail -->
+            <div class="flex items-center justify-center gap-8 text-neutral-400 text-xl pt-8 border-t border-white/5">
+                <a href="https://www.instagram.com/ahmetaltintasl/" target="_blank" aria-label="Instagram" class="hover:text-recRed transition-colors">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/905302921835" target="_blank" aria-label="WhatsApp" class="hover:text-[#25D366] transition-colors">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="mailto:infoahmetaltintas@gmail.com" aria-label="Gmail" class="hover:text-recRed transition-colors">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-white/5 relative z-10 text-center text-neutral-600 text-[11px] font-mono tracking-widest">
+        <p>AHMET ALTINTAŞ &copy; 2026. TÜM HAKLARI SAKLIDIR.</p>
+    </footer>
+
+    <!-- Video/Image Preview Modal -->
+    <div id="mediaModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-black/80 backdrop-blur-2xl">
+        <div class="relative w-full max-w-4xl glass-card rounded-xl overflow-hidden shadow-2xl">
+            
+            <div class="p-4 border-b border-white/10 flex items-center justify-between">
+                <div>
+                    <h3 id="modalTitle" class="text-sm font-bold text-white">Proje Başlığı</h3>
+                    <p id="modalCategory" class="text-[11px] text-neutral-400 font-light">Kategori</p>
+                </div>
+                <button onclick="closeModal()" aria-label="Kapat" class="text-neutral-400 hover:text-white text-lg p-2 transition-colors">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div id="modalContainer" class="aspect-video bg-black flex items-center justify-center">
+                <!-- Dynamic Content -->
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Copy Email Functionality
+        function copyEmail() {
+            const email = "infoahmetaltintas@gmail.com";
+            
+            const dummy = document.createElement("textarea");
+            document.body.appendChild(dummy);
+            dummy.value = email;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+
+            // Toast UI
+            const toast = document.getElementById("toast");
+            toast.classList.remove("opacity-0", "pointer-events-none");
+            toast.classList.add("opacity-100");
+
+            setTimeout(() => {
+                toast.classList.remove("opacity-100");
+                toast.classList.add("opacity-0", "pointer-events-none");
+            }, 3000);
+        }
+
+        // Modal Functionality
+        const mediaModal = document.getElementById("mediaModal");
+        const modalTitle = document.getElementById("modalTitle");
+        const modalCategory = document.getElementById("modalCategory");
+        const modalContainer = document.getElementById("modalContainer");
+
+        function openModal(title, type, src, category) {
+            modalTitle.innerText = title;
+            modalCategory.innerText = category;
+
+            if (type === 'video') {
+                modalContainer.innerHTML = `
+                    <video controls autoplay class="w-full h-full object-contain">
+                        <source src="${src}" type="video/mp4">
+                    </video>
+                `;
+            } else {
+                modalContainer.innerHTML = `
+                    <img src="${src}" alt="${title}" class="w-full h-full object-contain">
+                `;
+            }
+
+            mediaModal.classList.remove("hidden");
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+            mediaModal.classList.add("hidden");
+            modalContainer.innerHTML = "";
+            document.body.style.overflow = "auto";
+        }
+
+        mediaModal.addEventListener("click", (e) => {
+            if (e.target === mediaModal) closeModal();
+        });
+    </script>
+
+</body>
+</html>
